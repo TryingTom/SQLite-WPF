@@ -1,0 +1,28 @@
+﻿<Window x:Class="Oppimistehtävä_5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Oppimistehtävä_5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="9*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ListView x:Name="OrdersList" Grid.Row="0" Grid.Column="0" SelectionChanged="OrdersList_SelectionChanged"></ListView>
+        <ListView x:Name="OrderInfoList" Grid.Row="0" Grid.Column="1"></ListView>
+
+        <StackPanel Grid.Row="1" Grid.Column="1" Orientation="Horizontal">
+            <Label>Price:</Label>
+            <Label x:Name="PriceLabel">0</Label>
+            <Label>€</Label>
+        </StackPanel>
+    </Grid>
+</Window>
